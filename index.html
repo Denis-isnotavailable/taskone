@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+    <main>
+        <div class="container">
+            <table class="table main-table">
+                <thead class="main-table__head">
+                    <tr class="main-table__head-line">
+                        <th>Name</th>
+                        <th>Created</th>
+                        <th>Category</th>
+                        <th>Content</th>
+                        <th>Dates</th>
+                        <th>
+                            <svg class="icon main-table__head-icon" width="18" height="18">
+                                <use href="./images/icons.svg#icon-box-add"></use>
+                            </svg>
+                            <svg class="icon main-table__head-icon" width="18" height="18">
+                                <use href="./images/icons.svg#icon-bin2"></use>
+                            </svg>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="main-table__body">
+                    <!-- <tr class="main-table__line">
+                        <td>{ type }</td>
+                        <td>{ amount }</td>
+                        <td>{ currency }</td>
+                        <td>{ type }</td>
+                        <td>{ amount }</td>
+                        <td>
+                            <button class="icon__button button redact" type="button" >
+                                <svg class="icon main-table__line-icon" width="18" height="18">
+                                    <use href="./images/icons.svg#icon-pencil"></use>
+                                </svg>
+                            </button>
+                            
+                            <button class="icon__button button archieve" type="button">
+                                <svg class="icon main-table__line-icon" width="18" height="18">
+                                    <use href="./images/icons.svg#icon-box-add"></use>
+                                </svg>
+                            </button>
+                            
+                            <button class="icon__button button delete" type="button">
+                                <svg class="icon main-table__line-icon" width="18" height="18">
+                                    <use href="./images/icons.svg#icon-bin2"></use>
+                                </svg>
+                            </button>
+                            
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        
+            <button class="modal__button button" type="button" data-modal-close>
+                Create note
+            </button>
+
+            <button class="modal-archive__button button" type="button">
+                Archive
+            </button>
+
+
+<!-- 
+            <table class="table archived-table">
+                <thead class="archived-table__head">
+                    <tr class="archived-table__head-line">
+                        <th>Note Category</th>
+                        <th>Name</th>
+                        <th>UnArchived</th>
+                    </tr>
+                </thead>
+                <tbody class="archived-table__body">
+                </tbody>
+            </table> -->
+
+
+
+        
+            <table class="table status-table">
+                <thead class="status-table__head">
+                    <tr class="status-table__head-line">
+                        <th>Note Category</th>
+                        <th>Active</th>
+                        <th>Archived</th>
+                    </tr>
+                </thead>
+                <tbody class="status-table__body">
+                    <tr class="status-table__line">
+                        <td>{ type }</td>
+                        <td>{ amount }</td>
+                        <td>{ currency }</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+    </main>    
+
+
+    <div class="drop-bg drop-bg--is-hidden" data-modal>
+        <div class="modal">
+
+            <table class="table archived-table archived-table--is-hidden">
+                <thead class="archived-table__head">
+                    <tr class="archived-table__head-line">
+                        <th>Note Category</th>
+                        <th>Name</th>
+                        <th>UnArchived</th>
+                    </tr>
+                </thead>
+                <tbody class="archived-table__body">
+                </tbody>
+            </table>
+
+            <!-- <div>
+
+            </div> -->
+
+            <button class="modal-button" type="button">x</button>
+        </div>
+    </div>
+        
+    <script type="module" src="./js/notes.js"></script>
+</body>
+</html>
