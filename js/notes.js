@@ -217,7 +217,9 @@ function toggleArchivedNote(data, idNote) {
     updateLists(data);
 }
 
-function handleCloseModal() {
+function handleCloseModal() {    
+    submitForm.name.value = "";
+    submitForm.content.value = "";
     modal.classList.add("drop-bg--is-hidden");
     document.querySelector(".archived-table").classList.add("archived-table--is-hidden");
     submitForm.classList.add("form--is-hidden");
