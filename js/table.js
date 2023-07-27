@@ -1,5 +1,4 @@
 
-
 export const createTableList = (data) => {
     
     return data
@@ -32,12 +31,12 @@ export const createTableList = (data) => {
         .join('');
 };
 
-export const createArchivedList = (data) => {
+export const createArchivedList = (data) => {   
     
     return data
         .map(
-            ({ id, name, category, archived }) => {
-                if (archived) {
+            ({ id, name, category, archived }) => {                
+                if (archived) {                    
                     return `<tr class="archived-table__line" data-rowid="${id}">
                         <td>${category}</td>
                         <td>${name}</td>
@@ -54,22 +53,26 @@ export const createStatusList = (data) => {
         {
             name: "Task",
             active: 0,
-            archived: 0
+            archived: 0,
+            id: "01"
         },
         {
             name: "Random Thought",
             active: 0,
-            archived: 0
+            archived: 0,
+            id: "02"
         },
         {
             name: "Idea",
             active: 0,
-            archived: 0
+            archived: 0,
+            id: "03"
         },
         {
             name: "Quote",
             active: 0,
-            archived: 0
+            archived: 0,
+            id: "04"
         },
     ];
     
@@ -90,4 +93,3 @@ export const createStatusList = (data) => {
         )
         .join('');
 };
-

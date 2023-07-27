@@ -27,61 +27,30 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody class="main-table__body">
-                    <!-- <tr class="main-table__line">
-                        <td>{ type }</td>
-                        <td>{ amount }</td>
-                        <td>{ currency }</td>
-                        <td>{ type }</td>
-                        <td>{ amount }</td>
-                        <td>
-                            <button class="icon__button button redact" type="button" >
-                                <svg class="icon main-table__line-icon" width="18" height="18">
-                                    <use href="./images/icons.svg#icon-pencil"></use>
-                                </svg>
-                            </button>
-                            
-                            <button class="icon__button button archieve" type="button">
-                                <svg class="icon main-table__line-icon" width="18" height="18">
-                                    <use href="./images/icons.svg#icon-box-add"></use>
-                                </svg>
-                            </button>
-                            
-                            <button class="icon__button button delete" type="button">
-                                <svg class="icon main-table__line-icon" width="18" height="18">
-                                    <use href="./images/icons.svg#icon-bin2"></use>
-                                </svg>
-                            </button>
-                            
-                        </td>
-                    </tr> -->
+                <tbody class="main-table__body">                    
                 </tbody>
             </table>
+
+            <ul>
+                <li>
+                    <button class="modal-create__button button" type="button" data-modal-close>
+                        Create note
+                    </button>
+                </li>
+                <li>
+                    <button class="modal-archive__button button" type="button">
+                        Archive
+                    </button>
+                </li>
+            </ul>
         
-            <button class="modal__button button" type="button" data-modal-close>
+            <!-- <button class="modal-create__button button" type="button" data-modal-close>
                 Create note
             </button>
 
             <button class="modal-archive__button button" type="button">
                 Archive
-            </button>
-
-
-<!-- 
-            <table class="table archived-table">
-                <thead class="archived-table__head">
-                    <tr class="archived-table__head-line">
-                        <th>Note Category</th>
-                        <th>Name</th>
-                        <th>UnArchived</th>
-                    </tr>
-                </thead>
-                <tbody class="archived-table__body">
-                </tbody>
-            </table> -->
-
-
-
+            </button> -->
         
             <table class="table status-table">
                 <thead class="status-table__head">
@@ -107,6 +76,8 @@
     <div class="drop-bg drop-bg--is-hidden" data-modal>
         <div class="modal">
 
+            <button class="modal-close__button" type="button">x</button>
+
             <table class="table archived-table archived-table--is-hidden">
                 <thead class="archived-table__head">
                     <tr class="archived-table__head-line">
@@ -119,11 +90,30 @@
                 </tbody>
             </table>
 
-            <!-- <div>
+            <form class="form form--is-hidden" autocomplete="off" novalidate>                
+                <label class="form__label">
+                    <p class="item-label">Note Category</p>
+                    <select class="form__select" id="category" name="category">
+                        <option value="Task" selected>Task</option>
+                        <option value="Random Thought">Random Thought</option>
+                        <option value="Idea">Idea</option>
+                        <option value="Quote">Quote</option>
+                    </select>
+                </label>
 
-            </div> -->
+                <label class="form__label">
+                    <p class="item-label">Note Name</p>
+                    <input class="form__input" type="text" name="name" placeholder="Enter note name"/>
+                </label>
 
-            <button class="modal-button" type="button">x</button>
+                <label class="form__label">
+                    <p class="item-label">Note Content</p>
+                    <textarea class="form__textarea" name="content" rows="4" placeholder="Enter your text here..."></textarea>                    
+                </label>
+            
+                <button class="button modal-submit__button" type="submit">Submit</button>
+            </form>
+
         </div>
     </div>
         
