@@ -3,70 +3,72 @@ import { createTableList, createArchivedList, createStatusList } from './table.j
 let noteToRedact = null;
 
 let data = [
-  {
-    id: "1",
-    name: "Shopping List",
-    createdAt: "01.01.2023",
-    category: "Task",    
-    content: "Apples, bread",
-    dates: "",
-    archived: false
-  },
-  {
-    id: "2",
-    name: "The theory of evolution",
-    createdAt: "02.02.2023",
-    category: "Random Thought",    
-    content: "Charles Darwin was a British naturalist who proposed the theory of biological evolution",
-    dates: "",
-    archived: false
-  },
-  {
-    id: "3",
-    name: "New Feature",
-    createdAt: "03.03.2023",
-    category: "Idea",    
-    content: "New feature definition (03/03/2023): Something that is new has been recently created (05/03/2023)",
-    dates: "03/03/2023 05/03/2023",
-    archived: false
-  },
-  {
-    id: "4",
-    name: "William Gaddis",
-    createdAt: "04.04.2023",
-    category: "Quote",    
-    content: "New feature definition: Something that is new has been recently created",
-    dates: "",
-    archived: false
-  },
-  {
-    id: "5",
-    name: "Task",
-    createdAt: "05.05.2023",
-    category: "Task",    
-    content: "fffff ffffffff fffffffffffffffff",
-    dates: "",
-    archived: false
-  },
-  {
-    id: "6",
-    name: "One Man",
-    createdAt: "06.06.2023",
-    category: "Quote",    
-    content: "fffff ffffffff fffffffffffffffff",
-    dates: "",
-    archived: false
-  },
-  {
-    id: "7",
-    name: "Some Idea",
-    createdAt: "07.07.2023",
-    category: "Idea",    
-    content: "idea ideaa ideaaaaaa",
-    dates: "",
-    archived: false
-  }
-]
+    {
+        id: "1",
+        name: "Shopping List",
+        createdAt: "01.01.2023",
+        category: "Task",
+        content: "Apples, bread",
+        dates: "",
+        archived: false
+    },
+    {
+        id: "2",
+        name: "The theory of evolution",
+        createdAt: "02.02.2023",
+        category: "Random Thought",
+        content: "Charles Darwin was a British naturalist who proposed the theory of biological evolution",
+        dates: "",
+        archived: false
+    },
+    {
+        id: "3",
+        name: "New Feature",
+        createdAt: "03.03.2023",
+        category: "Idea",
+        content: "New feature definition (03/03/2023): Something that is new has been recently created (05/03/2023)",
+        dates: "03/03/2023 05/03/2023",
+        archived: false
+    },
+    {
+        id: "4",
+        name: "William Gaddis",
+        createdAt: "04.04.2023",
+        category: "Quote",
+        content: "New feature definition: Something that is new has been recently created",
+        dates: "",
+        archived: false
+    },
+    {
+        id: "5",
+        name: "Task",
+        createdAt: "05.05.2023",
+        category: "Task",
+        content: "fffff ffffffff fffffffffffffffff",
+        dates: "",
+        archived: false
+    },
+    {
+        id: "6",
+        name: "One Man",
+        createdAt: "06.06.2023",
+        category: "Quote",
+        content: "fffff ffffffff fffffffffffffffff",
+        dates: "",
+        archived: false
+    },
+    {
+        id: "7",
+        name: "Some Idea",
+        createdAt: "07.07.2023",
+        category: "Idea",
+        content: "idea ideaa ideaaaaaa",
+        dates: "",
+        archived: false
+    }
+];
+
+
 
 const mainTable = document.querySelector(".main-table__body");
 const archivedTable = document.querySelector(".archived-table__body");
@@ -77,6 +79,8 @@ const archiveButton = document.querySelector(".modal-archive__button");
 const createNoteButton = document.querySelector(".modal-create__button");
 const submitForm = document.querySelector(".form");
 
+updateLists(data);
+
 
 // async function fetchNotes() {
 //     try {
@@ -85,7 +89,7 @@ const submitForm = document.querySelector(".form");
 //         data = notes;
 //         updateLists(data);
 //     } catch (error) {
-//         console.error("Error: ", error.message);
+//         // console.error("Error: ", error.message);
 //     }    
 // };
 
